@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Reminder System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #f4f4f4;
+            margin-top: 20px;
+        }
+        .importance-note {
+            margin-bottom: 20px;
+        }
+        .importance-note h2 {
+            color: #007bff;
+        }
+        .importance-note img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .vaccine-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .vaccine-table th, .vaccine-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .vaccine-table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 48%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vaccination Reminder System</h1>
+    </header>
+
+    <div class="container">
+        <div class="importance-note">
+            <h2>Why Vaccination is Important</h2>
+            <p>Vaccination is a critical part of public health. It helps protect individuals and communities from serious diseases. Vaccines work by preparing the immune system to fight infections, ensuring that if exposed to the actual disease, the body can respond effectively.</p>
+            <p>Some key benefits of vaccination include:</p>
+            <ul>
+                <li>Prevention of serious diseases and complications.</li>
+                <li>Protection of vulnerable populations such as infants and elderly individuals.</li>
+                <li>Reduction of healthcare costs associated with treating preventable diseases.</li>
+                <li>Contribution to herd immunity, which helps protect those who cannot be vaccinated.</li>
+            </ul>
+            
+            <!-- Add Images Here -->
+            <div class="image-container">
+                <img src="https://example.com/vaccine-info.jpg" alt="Vaccination Information">
+                <img src="https://example.com/vaccine-benefits.jpg" alt="Benefits of Vaccination">
+            </div>
+
+            <h3>Vaccination Schedule for Infants</h3>
+            <table class="vaccine-table">
+                <thead>
+                    <tr>
+                        <th>Age (Months)</th>
+                        <th>Vaccination</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>BCG, Hepatitis B, Oral Polio Vaccine (OPV)</td>
+                    </tr>
+                    <tr>
+                        <td>1.5</td>
+                        <td>DTPaH (Diphtheria, Tetanus, Pertussis), Hib (Haemophilus influenzae type b), IPV (Inactivated Polio Vaccine)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hepatitis B (second dose)</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>DTPaH (second dose), Hib (second dose), IPV (second dose)</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Measles, Mumps, Rubella (MMR)</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>DTPaH (third dose), Hib (third dose)</td>
+                    </tr>
+                    <tr>
+                        <td>15-18</td>
+                        <td>DTPaH (booster)</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>MMR (second dose)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Please fill out the form below to receive reminders about vaccination camps for your infant.</p>
+
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScT5z6lSvJoCDsN8iiEnf63RZZ7XWVAioqUGxUjy7INkd9vTw/formResponse" method="POST">
+            <div class="form-group">
+                <label for="GuardianName">GuardianName:</label>
+                <input type="text" id="GuardianName" name="entry.2005620554" required>
+            </div>
+
+            <div class="form-group">
+                <label for="infantName">Infant's Name:</label>
+                <input type="text" id="infantName" name="entry.1498116881" required>
+            </div>
+
+            <div class="form-group">
+                <label for="infantAge">Infant's Age (in months):</label>
+                <input type="number" id="infantAge" name="entry.1166974658" required>
+            </div>
+
+            <div class="form-group">
+                <label for="whatsappNumber">WhatsApp Number:</label>
+                <input type="tel" id="whatsappNumber" name="entry.839337160" required placeholder="+91XXXXXXXXXX">
+            </div>
+
+<div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="entry.741269662" required placeholder="yourname@example.com">
+            </div>
+
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vaccination Reminder System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
